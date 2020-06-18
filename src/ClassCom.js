@@ -39,7 +39,7 @@ class Class1 extends React.Component {
     }
 
     render() {
-        let { data: d, age } = this.props
+        let { data: d, age } = {data:"property from Class1",age:2}
         let style = {
             fontSize: "20px",
             color: "blue"
