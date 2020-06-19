@@ -34,9 +34,13 @@ class Class1 extends React.Component {
             arr = arr.map((obj, idx) => index === idx ? { ...obj, toggle: false } : obj)
             this.setState({ data: arr })
         }
-
-
     }
+
+    // edit = (index) => {
+    //     let editText = [...this.state.data]
+    //     editText.map((item, idx) => idx == index ? {})
+
+    // }
 
     render() {
         let { data: d, age } = {data:"property from Class1",age:2}
@@ -65,7 +69,9 @@ class Class1 extends React.Component {
                         <label for={`check${index}`} key={index} >
                             <input onClick={() => this.toggle(index)} type="checkbox" id={`check${index}`} />
                         {obj.text}</label>
-                        <button onClick={() => this.delete(index)}>x</button></li>)}
+                        <button onClick={() => this.delete(index)}>x</button>
+                        <button onClick={() => this.edit(index)}>edit</button>
+                        {this.state.data[index].toggle ? <input type="text"></input> : null}</li>)}
             </ul>
         </div>)
     }

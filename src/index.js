@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App , * as Hello from './App';
 import * as serviceWorker from './serviceWorker';
+import {BrowserRouter} from "react-router-dom"
 console.log(Hello)
 
 // console.log(Hello.App)
@@ -10,8 +11,9 @@ console.log(Hello)
 
 ReactDOM.render(
   <React.StrictMode>
-    <App></App>
-
+  <BrowserRouter>
+  <App></App>
+  </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

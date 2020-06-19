@@ -4,10 +4,14 @@ import './App.css';
 import App1 from './App1'
 import Class1 from './ClassCom'
 import ToDoList from './ToDoList'
+import {Switch, Route, Link} from "react-router-dom"
 export default function App() {
   let a = 'a'
   return (
-    <div className="App">
+    <Switch>
+      <Route exact path='/'><div className="App">
+       <Link to ="/touch">Touch</Link>
+       <Link to ="/class1">Go to Class</Link> 
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -21,13 +25,22 @@ export default function App() {
         >
           Learn React
         </a>
-      </header> */}
-      {/* Hello world
+      </header>
+      Hello world
       <App1 data="property from App1" name="name" age={3} send={a}/>
       <Class1 data="property from Class1" age = {2}/> */}
       <ToDoList/>
-
-    </div>
+      </div>
+    </Route>
+    <Route path="/touch">
+      <div>Hello Touch </div>
+      <Link to ="/">ToDoList</Link>
+    </Route>
+    <Route path="/class1">
+      <Class1/>
+    <Link to ="/">Home</Link>
+    </Route>
+    </Switch>
   );
 }
 
