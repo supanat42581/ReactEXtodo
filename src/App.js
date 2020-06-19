@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import App1 from './App1'
 import Class1 from './ClassCom'
-
+import ToDoList from './ToDoList'
 export default function App() {
   let a = 'a'
   return (
@@ -22,9 +22,11 @@ export default function App() {
           Learn React
         </a>
       </header> */}
-      Hello world
+      {/* Hello world
       <App1 data="property from App1" name="name" age={3} send={a}/>
-      <Class1 data="property from Class1" age = {2}/>
+      <Class1 data="property from Class1" age = {2}/> */}
+      <ToDoList/>
+
     </div>
   );
 }
